@@ -73,13 +73,13 @@ function likeFollowAndNext(times) {
         setTimeout(() => {
             nextPost()
             return likeFollowAndNext(times - 1);
-        }, 200);
+        }, 3000);
     }, 2000);
 }
 
 
 function like() {
-    let like = document.getElementsByClassName('coreSpriteHeartOpen');
+    let like = document.getElementsByClassName('dCJp8 afkep');
     like[0].setAttribute('id', 'cuore');
     let app = document.getElementById('cuore');
     app.click();
@@ -91,6 +91,14 @@ function follow() {
     follow.item(0).setAttribute('id', 'toFollow');
     let followButton = document.getElementById('toFollow');
     followButton.click();
+    setTimeout(() => {
+        if (document.getElementsByClassName("pbNvD fPMEg")) {
+            let like = document.getElementsByClassName("aOOlW   HoLwm")[0];
+            like.setAttribute('id', 'annullaFollow');
+            let clickable = document.getElementById('annullaFollow');
+            clickable.click();
+        }
+    }, 500)
 }
 
 function nextPost() {
